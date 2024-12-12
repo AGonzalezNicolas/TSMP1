@@ -561,15 +561,24 @@ route "${cyellow}>>> c_configure_pfl${cnormal}"
 
   comment "    cd to pfl build directory "
   cd $PARFLOW_BLD >> $log_file 2>> $err_file
+  echo ""
+  echo "PARFLOW_BLD= " $PARFLOW_BLD
+  echo ""
   check
   export CC=$pcc
   export FC=$pfc
   export F77=$pf77
   export CXX=$pcxx
+  echo $CC 
+  echo $FC 
+  echo $F77 
+  echo $CXX	   
 
   comment "    configure pfsimulator and pftools"
   export SCOREP_WRAPPER=off
-  cmake ../ $flagsSim >> $log_file 2>> $err_file
+   echo "flagsSim= ",$flagsSim 
+   module list
+  cmake .. $flagsSim >> $log_file 2>> $err_file
   check
 route "${cyellow}<<< c_configure_pfl${cnormal}"
 }
