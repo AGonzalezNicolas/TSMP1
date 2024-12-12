@@ -5,8 +5,6 @@ module load Stages/2024
 module load GCC/12.3.0
 #module load ParaStationMPI/5.9.2-1      # Export below MPI_VAR="$EBROOTPSMPI"
 module load OpenMPI/4.1.5               # Export below MPI_VAR="$EBROOTOPENMPI"
-module load CUDA 
-module load UCX-settings/RC-CUDA
 module load Hypre/2.31.0  
 
 #module load Silo/4.11                # not installed on JEDI
